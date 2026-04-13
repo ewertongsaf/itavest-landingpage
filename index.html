@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Faz o site se adaptar a telas de celular (responsividade) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Vestibular ITA 2027</title>
+
+  <!-- Importa fontes do Google Fonts.
+       "Syne" é usada nos títulos (display) — tem personalidade técnica/moderna.
+       "IBM Plex Mono" dá um toque de código/engenharia nos detalhes. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Importa o arquivo de estilos externo (styles.css).
+       Separar HTML e CSS é boa prática: HTML = estrutura, CSS = aparência. -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVBAR — barra de navegação no topo
+       ============================================================ -->
+  <header class="navbar">
+    <!-- Logo / identidade visual -->
+    <div class="navbar__logo">
+      <!-- span com a classe "accent" vai receber uma cor de destaque via CSS -->
+      <span class="accent">ITA</span> Vestibular
+    </div>
+
+    <!-- Links de navegação. A tag <nav> tem semântica de acessibilidade. -->
+    <nav class="navbar__links">
+      <a href="#sobre">Sobre</a>
+      <a href="#cronograma">Cronograma</a>
+      <a href="#fases">Fases</a>
+      <a href="#inscricao" class="btn btn--outline">Inscrições</a>
+    </nav>
+  </header>
+
+
+  <!-- ============================================================
+       HERO — seção principal de impacto visual
+       ============================================================ -->
+  <section class="hero">
+
+    <!-- Decoração de fundo: círculos animados via CSS -->
+    <div class="hero__bg-circle hero__bg-circle--1"></div>
+    <div class="hero__bg-circle hero__bg-circle--2"></div>
+
+    <!-- Tag de categoria — pequeno rótulo acima do título -->
+    <div class="hero__tag">Processo Seletivo 2027</div>
+
+    <!-- Título principal. <br /> força quebra de linha. -->
+    <h1 class="hero__title">
+      Forme-se em<br />
+      <span class="accent">Engenharia</span><br />
+      no melhor do Brasil
+    </h1>
+
+    <!-- Subtítulo / descrição -->
+    <p class="hero__subtitle">
+      O Instituto Tecnológico de Aeronáutica seleciona os melhores talentos
+      do país para uma formação de excelência em ciência e engenharia.
+    </p>
+
+    <!-- Grupo de botões de ação (CTA = Call To Action) -->
+    <div class="hero__cta">
+      <!-- Botão primário (cheio) -->
+      <a href="#inscricao" class="btn btn--primary">Inscreva-se agora</a>
+      <!-- Botão secundário (contorno) -->
+      <a href="#sobre" class="btn btn--ghost">Saiba mais →</a>
+    </div>
+
+    <!-- Estatísticas rápidas -->
+    <div class="hero__stats">
+      <!-- Cada stat é um item independente -->
+      <div class="stat">
+        <span class="stat__number">180</span>
+        <span class="stat__label">vagas / ano</span>
+      </div>
+      <div class="stat stat--divider"></div>
+      <div class="stat">
+        <span class="stat__number">~10.000</span>
+        <span class="stat__label">candidatos</span>
+      </div>
+      <div class="stat stat--divider"></div>
+      <div class="stat">
+        <span class="stat__number">#1</span>
+        <span class="stat__label">engenharia BR</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SOBRE — cards informativos
+       ============================================================ -->
+  <section class="section" id="sobre">
+    <!-- Cabeçalho da seção -->
+    <div class="section__header">
+      <p class="section__eyebrow">Por que o ITA?</p>
+      <h2 class="section__title">Uma instituição única</h2>
+    </div>
+
+    <!-- Grid de cards. A classe "cards-grid" define layout de 3 colunas no CSS. -->
+    <div class="cards-grid">
+
+      <!-- card individual -->
+      <div class="card">
+        <!-- Ícone decorativo (emoji como SVG alternativo rápido) -->
+        <div class="card__icon">🚀</div>
+        <h3 class="card__title">Referência Nacional</h3>
+        <p class="card__body">
+          Consistentemente reconhecido como o melhor curso de Engenharia do
+          Brasil pelos principais rankings acadêmicos.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card__icon">⚙️</div>
+        <h3 class="card__title">Formação Integral</h3>
+        <p class="card__body">
+          5 anos de grade intensa em matemática, física, computação e
+          engenharia, com foco em resolução de problemas complexos.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card__icon">🛩️</div>
+        <h3 class="card__title">Vínculo com a FAB</h3>
+        <p class="card__body">
+          Vinculado à Força Aérea Brasileira, o ITA oferece bolsas integrais
+          e alojamento para todos os alunos aprovados.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CRONOGRAMA — linha do tempo do vestibular
+       ============================================================ -->
+  <section class="section section--dark" id="cronograma">
+    <div class="section__header">
+      <p class="section__eyebrow">Datas importantes</p>
+      <h2 class="section__title">Cronograma 2027</h2>
+    </div>
+
+    <!-- A linha do tempo usa uma lista semântica (<ul>) com CSS para
+         criar o visual de "linha vertical" com pontos. -->
+    <ul class="timeline">
+
+      <!-- Cada item da timeline tem um "ponto" (::before no CSS) e o conteúdo -->
+      <li class="timeline__item timeline__item--done">
+        <span class="timeline__date">Ago 2026</span>
+        <div class="timeline__content">
+          <strong>Abertura das Inscrições</strong>
+          <p>Início do período de inscrição pelo site oficial.</p>
+        </div>
+      </li>
+
+      <li class="timeline__item timeline__item--done">
+        <span class="timeline__date">Set 2026</span>
+        <div class="timeline__content">
+          <strong>Encerramento das Inscrições</strong>
+          <p>Prazo final para envio de documentação e pagamento da taxa.</p>
+        </div>
+      </li>
+
+      <li class="timeline__item timeline__item--active">
+        <span class="timeline__date">Out 2026</span>
+        <div class="timeline__content">
+          <strong>1ª Fase — Provas Objetivas</strong>
+          <p>Matemática, Física, Química e Inglês. Aplicadas em todo o Brasil.</p>
+        </div>
+      </li>
+
+      <li class="timeline__item">
+        <span class="timeline__date">Nov 2025</span>
+        <div class="timeline__content">
+          <strong>2ª Fase — Provas Dissertativas</strong>
+          <p>Matemática e Física aprofundados, realizados em São José dos Campos.</p>
+        </div>
+      </li>
+
+      <li class="timeline__item">
+        <span class="timeline__date">Dez 2026</span>
+        <div class="timeline__content">
+          <strong>Resultado Final</strong>
+          <p>Divulgação da lista de aprovados e convocação para matrícula.</p>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+
+  <!-- ============================================================
+       FASES — cards das etapas do vestibular
+       ============================================================ -->
+  <section class="section" id="fases">
+    <div class="section__header">
+      <p class="section__eyebrow">Como funciona</p>
+      <h2 class="section__title">As etapas do processo</h2>
+    </div>
+
+    <!-- Aqui usamos "phases-grid" com layout de 2 colunas -->
+    <div class="phases-grid">
+
+      <div class="phase-card">
+        <!-- Número da fase grande, decorativo -->
+        <span class="phase-card__num">01</span>
+        <h3 class="phase-card__title">Primeira Fase</h3>
+        <ul class="phase-card__list">
+          <li>Matemática — 12 questões</li>
+          <li>Física — 12 questões</li>
+          <li>Química — 12 questões</li>
+          <li>Inglês — 12 questões</li>
+        </ul>
+        <p class="phase-card__note">
+          Aplicada em capitais de todo o Brasil.
+        </p>
+      </div>
+
+      <div class="phase-card">
+        <span class="phase-card__num">02</span>
+        <h3 class="phase-card__title">Segunda Fase</h3>
+        <ul class="phase-card__list">
+          <li>Matemática — dissertativa</li>
+          <li>Química — dissertativa</li>
+          <li>Física — dissertativa</li>
+          <li>Redação</li>
+        </ul>
+        <p class="phase-card__note">
+          Aplicada em todas as capitais do Brasil.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CTA FINAL — chamada para ação de inscrição
+       ============================================================ -->
+  <section class="cta-section" id="inscricao">
+    <div class="cta-section__inner">
+      <h2 class="cta-section__title">Pronto para o desafio?</h2>
+      <p class="cta-section__body">
+        As inscrições para o Vestibular ITA 2027 estão abertas.
+        Acesse o site oficial para se inscrever e consultar o edital completo.
+      </p>
+      <!-- target="_blank" abre o link em nova aba; rel="noopener" é segurança -->
+      <a
+        href="https://www.vestibular.ita.br"
+        target="_blank"
+        rel="noopener"
+        class="btn btn--primary btn--large"
+      >
+        Acessar site oficial →
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER — rodapé
+       ============================================================ -->
+  <footer class="footer">
+    <p>
+      <span class="accent">ITA</span> — Instituto Tecnológico de Aeronáutica
+      &nbsp;·&nbsp; São José dos Campos, SP
+    </p>
+    <p class="footer__small">
+      Esta é uma landing page de demonstração. Acesse
+      <a href="https://www.vestibular.ita.br" target="_blank">vestibular.ita.br</a>
+      para informações oficiais.
+    </p>
+  </footer>
+
+</body>
+</html>
