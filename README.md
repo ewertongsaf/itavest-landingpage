@@ -1,6 +1,8 @@
 # Vestibular ITA — Landing Page
 
-Landing page institucional para o processo seletivo do ITA (Instituto Tecnológico de Aeronáutica), desenvolvida como projeto prático de aprendizado de HTML e CSS.
+**🔗 Deploy:** [itavest-landingpage.vercel.app](https://itavest-landingpage.vercel.app)
+
+Landing page institucional para o processo seletivo do ITA (Instituto Tecnológico de Aeronáutica), desenvolvida como projeto prático de aprendizado de HTML e CSS. Hospedada no Vercel.
 
 ## Estrutura do projeto
 
@@ -72,9 +74,15 @@ Media query em `max-width: 768px` adapta o layout para mobile:
 | `--color-text` | `#e8edf5` | Texto principal |
 | `--color-muted` | `#6b7a99` | Texto secundário |
 
-## Como rodar
+## Deploy
 
-Nenhuma dependência ou build step necessário. Basta abrir o `index.html` no navegador:
+O projeto está hospedado no **Vercel** e acessível em:
+
+> [https://itavest-landingpage.vercel.app](https://itavest-landingpage.vercel.app)
+
+Por ser HTML/CSS puro (sem build step), o Vercel serve os arquivos estáticos diretamente. Qualquer push para a branch principal atualiza o deploy automaticamente.
+
+## Rodar localmente
 
 ```bash
 # Com VS Code + extensão Live Server
